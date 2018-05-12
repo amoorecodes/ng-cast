@@ -6,13 +6,5 @@ angular.module('video-player')
     // playback: '<'
   },
 
-  template: `
-    <ul class="video-list">
-      <video-list-entry 
-        video='video'
-        play-on-click="$ctrl.playOnClick"
-        ng-repeat='video in $ctrl.videos track by $index'
-      />
-    </ul>
-  ` 
+  templateUrl: 'src/templates/videoList.html'
 });

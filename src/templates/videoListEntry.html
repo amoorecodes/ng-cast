@@ -1,7 +1,9 @@
-  <ul class="video-list">
-      <video-list-entry 
-        video='video'
-        ng-repeat='video in $ctrl.videos track by $index'
-        ng-click="$ctrl.playOnClick"
-      />
-    </ul>
+  <li class="video-list-entry media">
+    <div class="media-left">
+      <img class="media-object" src='{{ $ctrl.video.snippet.thumbnails.default.url}}' />
+    </div>
+    <div class="media-body">
+      <div class="video-list-entry-title" ng-click="$ctrl.playOnClick($ctrl.video)">{{ $ctrl.video.snippet.title }}</div>
+      <div class="video-list-entry-detail">{{ $ctrl.video.snippet.description }}</div>
+    </div>
+  </li>

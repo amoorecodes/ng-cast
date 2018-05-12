@@ -13,9 +13,8 @@ angular.module('video-player')
         q: input
       }
     }).then(function(response) {
-        console.log('Success!');
-        console.log(response);
-        callback(response.data.items);
+        console.log('Success!', response);
+        callback(response);
       }, function(error) {
         console.log('Unlucky!');
         console.log(error);
